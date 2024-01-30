@@ -1,16 +1,19 @@
+alphabet = "(abcdefghijklmnopqrstuvwxyz)"
 
-# Given a string indicating a range of letters, return a string which includes all the letters in that range, including the last letter.
-# Note that if the range is given in capital letters, return the string in capitals also!
+# obtain user input for the range of alphabet
+user_range = input("put a range of alphabet (e.g., a-z): ")
 
-# Examples
-# "a-z" ➞ "abcdefghijklmnopqrstuvwxyz"
-# "h-o" ➞ "hijklmno"
-# "Q-Z" ➞ "QRSTUVWXYZ"
-# "J-J" ➞ "J"
-# Notes a hyphen will separate the two letters in the string.
+# Extract start and end letters from the user input
+start_letter, end_letter = user_range.split("-")
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+# Find the indices of start and end letters in the alphabet
+start_index = alphabet.index
+end_index = alphabet.index(end_letter)
 
-user_range = input("Enter a range of letters (e.g., a-z): ")
+# Create a substring using the provided indices
+result_string = alphabet[start_index:end_index]
 
+# Print the result
 print(result_string)
+
+
